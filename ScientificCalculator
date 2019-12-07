@@ -1,0 +1,115 @@
+import java.util.Scanner;
+public class sciCalc
+{
+    public static void main(String args[])
+    {
+        int userOp = 0;
+        int counter = 0;
+        double sum = 0;
+        do
+        {
+        Scanner operation = new Scanner(System.in); 
+
+        System.out.println("Calculator Menu");
+        System.out.println("---------------");
+        System.out.println("0. Exit Program");
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+        System.out.println("5. Exponentiation");
+        System.out.println("6. Logarithm");
+        System.out.println("7. Display Average");
+        System.out.println();
+        System.out.print("Enter Menu Selection: ");
+
+        userOp = operation.nextInt(); 
+
+        if(userOp == 0)
+        {
+            break;
+        }
+
+        double x = 0;
+        double y = 0;
+        double ans = 0;
+        switch(userOp)
+        {
+            case 1:
+                System.out.print("Enter first operand: ");
+                x = operation.nextDouble();
+                System.out.print("Enter second operand: " );
+                y = operation.nextDouble();
+                ans = x + y;
+                System.out.println("\nCurrent Result: " + ans + "\n");
+                counter++; 
+                sum = sum + ans;
+                break;
+            case 2:
+                System.out.print("Enter first operand: ");
+                x = operation.nextDouble();
+                System.out.print("Enter second operand: " );
+                y = operation.nextDouble();
+                ans = x - y;
+                System.out.println("\nCurrent Result: " + ans + "\n");
+                counter++; 
+                sum = sum + ans;
+                break;
+            case 3:
+                System.out.print("Enter first operand: ");
+                x = operation.nextDouble();
+                System.out.print("Enter second operand: " );
+                y = operation.nextDouble();
+                ans = x * y;
+                System.out.println("\nCurrent Result: " + ans + "\n");
+                counter++; 
+                sum = sum + ans;
+                break;
+            case 4:
+                System.out.print("Enter first operand: ");
+                x = operation.nextDouble();
+                System.out.print("Enter second operand: " );
+                y = operation.nextDouble();
+                ans = x / y;
+                System.out.println("\nCurrent Result: " + ans + "\n");
+                counter++; 
+                sum = sum + ans;
+                break;
+            case 5:
+                System.out.print("Enter first operand: ");
+                x = operation.nextDouble();
+                System.out.print("Enter second operand: " );
+                y = operation.nextDouble();
+                ans = Math.pow(x,y);
+                System.out.println("\nCurrent Result: " + ans + "\n");
+                counter++; 
+                sum = sum + ans;
+                break;
+            case 6:
+                System.out.print("Enter first operand: ");
+                x = operation.nextDouble();
+                System.out.print("Enter second operand: " );
+                y = operation.nextDouble();
+                ans = Math.log(y)/Math.log(x);
+                System.out.println("\nCurrent Result: " + ans + "\n");
+                counter++; 
+                sum = sum + ans;
+                break;
+            case 7:
+                ans = sum / counter;
+                System.out.println("\nSum of calculations: " + sum);
+                System.out.println("Number of calculations: " + counter);
+                
+                System.out.println("Average of calculations: " + ans + "\n");
+                break;
+            default:
+                System.out.println("Not a valid operation.");
+        }
+        }
+        while (userOp <= 8);
+        {
+        }
+        
+    }
+
+}
